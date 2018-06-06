@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="无缝轮播.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //声明一个数组  保存每张图片的宽度
+            var moveX = [367, 606, 315, 445, 334, 353, 806, 295];
+            var index = 0;
+            var sumX = 0;
+
+            function autobofangQ() {
+                //总共8张图片,第九张的时候要回到第一张
+                if (index >= 9) {
+                    index = 0;
+                    sumX = 0;
+                    $('.daboxQ .tongrenzuoping').css('left', '0');
+                }
+                $('.daboxQ .tongrenzuoping').stop().animate({
+                    left:
+                        -(moveX[index] + sumX)
+                }, 1500)
+                sumX += moveX[index];
+                index++;
+            }
+            //定时器
+            var interQId = setInterval(autobofangQ, 2000);
+            //鼠标移入事件
+            $('.daboxQ').mouseenter(function () {
+                clearInterval(interQId);
+            }).mouseleave(function () {
+                interQId = setInterval(autobofangQ, 2000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- <div class="custom-service w"> -->
+    
+        <div class="daboxQ w">
+            <div class="tongrenzuoping">
+                <div class="manhua">
+                    <a href="javascript:;" class="tag1">
+                        <img src="images/103814hjoy6gdn5oyo6poe.png" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag2">
+                        <img src="images/160936yb52znokfko3vkxy.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag3">
+                        <img src="images/161251f5r36rfz4e35g5g5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag4">
+                        <img src="images/161755d3njqz3wgj0i0piz.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag5">
+                        <img src="images/161808m8ifviaj6ib86nza.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag6">
+                        <img src="images/162021e7egdd979k9u8qyd.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag7">
+                        <img src="images/175832hhzbtme66ueffwf8.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag8">
+                        <img src="images/204712rkjrw7vdg2ylrw1f.png" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag1">
+                        <img src="images/103814hjoy6gdn5oyo6poe.png" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag2">
+                        <img src="images/160936yb52znokfko3vkxy.jpg" alt="">
+                    </a>
+                </div>
+                <div class="manhua">
+                    <a href="javascript:;" class="tag3">
+                        <img src="images/161251f5r36rfz4e35g5g5.jpg" alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    <!-- </div> -->
+    <!--自助专区结束-->
+</body>
+
+</html>

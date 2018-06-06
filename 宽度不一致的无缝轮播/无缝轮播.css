@@ -1,0 +1,56 @@
+/* 初始化代码 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: 0 none;
+    /*兼容低版本,会出现边框*/
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.daboxQ {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin-top:100px;
+}
+
+.daboxQ .tongrenzuoping {
+    position: absolute;
+    width: 4809px;
+}
+
+.daboxQ .manhua {
+    float: left;
+    height: 400px;
+    margin: 0 3px;
+}
+
+.daboxQ .manhua img {
+    display: block;
+    width: auto;
+    height: 100%;
+    border: none;
+}
+
+/*自助专区结束*/

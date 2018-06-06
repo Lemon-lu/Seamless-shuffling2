@@ -3,7 +3,7 @@
 今天写一个加入了Jq代码的,即使图片大小不一样也能做成无缝轮播
 效果如下:
 
-![](D:\github\Seamless shuffling2\GIF.gif)
+![image](https://github.com/Lemon-lu/Seamless-shuffling2/blob/master/GIF.gif)
 
 由于是无缝轮播 在放到最后一张图片的时候会快速跳转到第一张图片 看起来不像无缝轮播
 所以我们需要复制三张图片  让它看起来像无缝轮播
